@@ -16,8 +16,8 @@ class MinimumWorkingExampleTest {
                 .toList();
 
         //below assertions work with spring-core 6.2.12 but fail with spring-core 6.2.13
-        Assertions.assertEquals("public default java.lang.Integer com.oberthur.tsp.apay.MinimumWorkingExampleTest$B.getValue()", BridgeMethodResolver.findBridgedMethod(getValueMethods.get(0)).toString());
-        Assertions.assertEquals("public default java.lang.Integer com.oberthur.tsp.apay.MinimumWorkingExampleTest$B.getValue()", BridgeMethodResolver.findBridgedMethod(getValueMethods.get(1)).toString());
+        Assertions.assertEquals("public default java.lang.Integer com.example.MinimumWorkingExampleTest$B.getValue()", BridgeMethodResolver.findBridgedMethod(getValueMethods.get(0)).toString());
+        Assertions.assertEquals("public default java.lang.Integer com.example.MinimumWorkingExampleTest$B.getValue()", BridgeMethodResolver.findBridgedMethod(getValueMethods.get(1)).toString());
     }
 
     interface A<T> {
