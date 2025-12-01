@@ -1,4 +1,4 @@
-package com.oberthur.tsp.apay;
+package com.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.BridgeMethodResolver;
@@ -15,6 +15,7 @@ class MinimumWorkingExampleTest {
                 .filter(it -> it.getName().equals("getValue")) //get both bridge and non-bridge methods
                 .toList();
 
+        //below assertions work with spring-core 6.2.12 but fail with spring-core 6.2.13
         Assertions.assertEquals("public default java.lang.Integer com.oberthur.tsp.apay.MinimumWorkingExampleTest$B.getValue()", BridgeMethodResolver.findBridgedMethod(getValueMethods.get(0)).toString());
         Assertions.assertEquals("public default java.lang.Integer com.oberthur.tsp.apay.MinimumWorkingExampleTest$B.getValue()", BridgeMethodResolver.findBridgedMethod(getValueMethods.get(1)).toString());
     }
